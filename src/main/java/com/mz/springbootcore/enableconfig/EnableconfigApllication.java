@@ -13,7 +13,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 @EnableAutoConfiguration
 public class EnableconfigApllication {
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = new SpringApplicationBuilder(LovedCandy.class).web(WebApplicationType.NONE)
+        ConfigurableApplicationContext context = new SpringApplicationBuilder(LovedCandy.class)
+                .web(WebApplicationType.NONE)
                 .run(args);
 
         Object demoBeanRepository = context.getBean("lovedCandy");
